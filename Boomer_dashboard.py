@@ -50,22 +50,39 @@ hr { border-color:#dce5ef; }
 
 st.sidebar.markdown(
     """
-    <div style="padding:8px 0 16px 0">
-      <div style="font-size:1.35rem;font-weight:800;letter-spacing:.04em">🧴 BOOMER</div>
-      <div style="font-size:.68rem;color:#9eb8d6;letter-spacing:.13em">FINANCIAL COMMAND CENTRE</div>
-    </div>
-    ### NAVIGATION
-    - [Executive Dashboard](#business-overview)
-    - [Financial Statements](#6-integrated-three-statement-model)
-    - [Product Analytics](#8-product-master-and-product-wise-profitability)
-    - [Forecasting & Scenarios](#9-forecasting-frequency-and-scenario-comparison)
-    - [Working Capital](#working-capital-schedule)
-    - [Expansion & CapEx](#12-expansion-factory-export-and-uae-investment-plan)
-    - [SQL Database](#10-sql-database)
-    - [Power BI & Tableau](#11-power-bi-and-tableau-data-exports)
-    - [Excel Export](#7-download-professional-excel-financial-model)
+    
+# ---------------- BOOMER SIDEBAR BRANDING ----------------
+
+st.sidebar.markdown(
     """
+    <div style="padding:12px 0 20px 0;">
+        <div style="font-size:1.5rem;font-weight:800;
+                    letter-spacing:.04em;color:white;">
+            🧴 BOOMER
+        </div>
+        <div style="font-size:.7rem;color:#9eb8d6;
+                    letter-spacing:.13em;">
+            FINANCIAL COMMAND CENTRE
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
 )
+
+st.sidebar.markdown("""
+### NAVIGATION
+
+- [Executive Dashboard](#business-overview)
+- [Financial Statements](#6-integrated-three-statement-model)
+- [Product Analytics](#8-product-master-and-product-wise-profitability)
+- [Forecasting & Scenarios](#9-forecasting-frequency-and-scenario-comparison)
+- [Working Capital](#working-capital-schedule)
+- [Expansion & CapEx](#12-expansion-factory-export-and-uae-investment-plan)
+- [SQL Database](#10-sql-database)
+- [Power BI & Tableau](#11-power-bi-and-tableau-data-exports)
+- [Excel Export](#7-download-professional-excel-financial-model)
+""")
+
 
 # ---------------------- HELPERS ---------------------------
 
