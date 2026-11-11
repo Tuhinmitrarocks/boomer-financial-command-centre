@@ -1505,13 +1505,15 @@ if db_engine is not None and st.button("Load recent saved model runs"):
         from sqlalchemy import text as sql_text
         with db_engine.connect() as conn:
             recent_runs = pd.read_sql(
-                sql_text("""
-                    SELECT run_id, model_version, scenario, created_at, kpis
-                    FROM boomer_model_runs
-                    ORDER BY created_at DESC
-                    LIMIT 25
-                """), conn
-            )
+                recent_runs = pd.read_sql_query(
+    """
+    SELECT run_id, model_version, scenario, created_at, kpis
+    FROM boomer_model_runs
+    ORDER BY created_at DESC
+    LIMIT 25
+    """,
+    conn
+)
         st.dataframe(recent_runs, use_container_width=True, hide_index=True)
     except Exception as db_error:
         st.error(f"Could not retrieve saved runs ({type(db_error).__name__}). Check database configuration and server logs.")
